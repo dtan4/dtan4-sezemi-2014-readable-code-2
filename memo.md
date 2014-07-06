@@ -8,3 +8,7 @@
 * 変数名を `recipe_data_file_name` とすることで、この変数がレシピデータのファイル名であることを明確にした。
 * 引数が指定されていない、指定されたファイルがないときはその旨表示して終了するようにした。
     * [コミット f5b88c5](https://github.com/dtan4/dtan4-sezemi-2014-readable-code-2/commit/f5b88c59aaba6b7bddf5e48aacf80c35ef64fccc)
+
+## spec5
+* `#show_recipe_title` メソッドに渡す変数名を `recipe_title`, `id` とし、何を引数に与えているのかを明確にした。
+    * [コミット 0825760](https://github.com/dtan4/dtan4-sezemi-2014-readable-code-2/commit/082576024433f211c37b19e70eeabe9b000f7dd4)
