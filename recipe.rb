@@ -20,6 +20,8 @@ unless File.exists?(recipe_data_file_name)
   exit 1
 end
 
-open(recipe_data_file_name).each_with_index do |recipe_title, id|
+open(recipe_data_file_name).each_with_index do |recipe_title, index|
+  # index は0始まりであるため、行番号（1始まり）と対応させるために +1 する
+  id = index + 1
   show_recipe_title(id, recipe_title)
 end
