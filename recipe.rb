@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
 
-puts "オムライス"
+def show_recipe_title(recipe_title)
+  puts recipe_title
+end
+
+show_recipe_title("オムライス")
