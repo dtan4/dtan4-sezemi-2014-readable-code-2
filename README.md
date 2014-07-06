@@ -5,5 +5,5 @@
 
 ```sh
 chmod +x recipe.rb
-./recipe.rb
+./recipe.rb recipe-data.txt
 ```
