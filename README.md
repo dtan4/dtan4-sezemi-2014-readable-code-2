@@ -7,3 +7,14 @@
 chmod +x recipe.rb
 ./recipe.rb recipe-data.txt
 ```
+
+## `recipe-data.txt` のフォーマット
+1行に1つレシピタイトルを書く。
+
+### 例
+
+```
+オムライス
+親子丼
+杏仁豆腐
+```
