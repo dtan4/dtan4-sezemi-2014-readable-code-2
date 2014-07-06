@@ -12,3 +12,5 @@
 ## spec5
 * `#show_recipe_title` メソッドに渡す変数名を `recipe_title`, `id` とし、何を引数に与えているのかを明確にした。
     * [コミット 0825760](https://github.com/dtan4/dtan4-sezemi-2014-readable-code-2/commit/082576024433f211c37b19e70eeabe9b000f7dd4)
+* `id` が `recipe-data.txt` の行番号に対応することを明確にした
+    * [コミット 1e7f6e7](https://github.com/dtan4/dtan4-sezemi-2014-readable-code-2/commit/1e7f6e7352573f9aa38adb1e7a6bc5740b1a7e7e)
