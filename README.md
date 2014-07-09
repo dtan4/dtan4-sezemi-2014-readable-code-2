@@ -6,8 +6,8 @@
 `id` を指定しない場合、すべてのレシピが出力される。
 
 ```sh
-chmod +x recipe.rb
-./recipe.rb recipe-data.txt [id]
+chmod +x manager.rb
+./manager.rb recipe-data.txt [id]
 ```
 
 ## `recipe-data.txt` のフォーマット
