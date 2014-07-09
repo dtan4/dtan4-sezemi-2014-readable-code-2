@@ -11,12 +11,17 @@ chmod +x manager.rb
 ```
 
 ## `recipe-data.txt` のフォーマット
-1行に1つレシピタイトルを書く。
+1行に1つレシピ情報を書く。
+レシピのフォーマットは以下に準ずる。
+
+```
+<recipe title> <recipe url>
+```
 
 ### 例
 
 ```
-オムライス
-親子丼
-杏仁豆腐
+オムライス http://cookpad.com/recipe/2653946
+親子丼 http://cookpad.com/recipe/2657882
+杏仁豆腐 http://cookpad.com/recipe/2654398
 ```
