@@ -1,35 +1,23 @@
 #!/usr/bin/env ruby
 
+require_relative "./recipe_list.rb"
+
 USAGE = <<-EOS
 usage: ./recipe.rb <recipe data file> [id]
 EOS
 
-def show_recipe_title(id, recipe_title)
-  puts "#{id}: #{recipe_title}"
-end
+class Recipe
+  attr_reader :id, :title, :url
 
-def show_all_recipes(recipe_data_file_name)
-  open(recipe_data_file_name).each_with_index do |recipe_title, index|
-    show_recipe_title(id_from_index(index), recipe_title)
+  def initialize(id, title, url)
+    @id = id
+    @title = title
+    @url = url
   end
-end
 
-def show_recipe_with_id(recipe_data_file_name, id)
-  recipe_title = recipe_title_from_id(recipe_data_file_name, id)
-  show_recipe_title(id, recipe_title)
-end
-
-def id_from_index(index)
-  # index は0始まりであるため、行番号（1始まり）と対応させるために +1 する
-  index + 1
-end
-
-def index_from_id(id)
-  id - 1
-end
-
-def recipe_title_from_id(recipe_data_file_name, id)
-  open(recipe_data_file_name).read.lines[index_from_id(id)]
+  def show_recipe_data(out = STDOUT)
+    out.puts "#{@id}: #{@title} #{@url}"
+  end
 end
 
 
@@ -47,8 +35,11 @@ end
 
 id_to_show = ARGV[1].to_i if ARGV[1]
 
+recipe_list = RecipeList.new
+recipe_list.read_from_file(recipe_data_file_name)
+
 if id_to_show
-  show_recipe_with_id(recipe_data_file_name, id_to_show)
+  recipe_list.find_by_id(id_to_show).show_recipe_data
 else
-  show_all_recipes(recipe_data_file_name)
+  recipe_list.all.each { |recipe| recipe.show_recipe_data }
 end
